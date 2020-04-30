@@ -30,7 +30,7 @@ public class JavaCalculator {
     private JButton sumButton;
 
     //метод полулчения оператора в вычислении
-    private void getOperator(String btnText ){
+    private void getOperator(String btnText) {
         math_operator = btnText.charAt(0);
         total1 = total1 + Double.parseDouble(textDisp.getText());
         textDisp.setText("");
@@ -121,7 +121,7 @@ public class JavaCalculator {
         equalButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                switch (math_operator){
+                switch (math_operator) {
                     case '+':
                         total2 = total1 + Double.parseDouble(textDisp.getText());
                         break;
@@ -132,7 +132,7 @@ public class JavaCalculator {
                         total2 = total1 / Double.parseDouble(textDisp.getText());
                         break;
                     case '*':
-                        total2 =  total1 * Double.parseDouble(textDisp.getText());
+                        total2 = total1 * Double.parseDouble(textDisp.getText());
                         break;
                 }
                 textDisp.setText(Double.toString(total2));
